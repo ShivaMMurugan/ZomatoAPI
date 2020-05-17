@@ -36,23 +36,20 @@ class ZomotoAPI:
 
 	def search_city_by_geo_code(self, latitude, longitude):
 
-		self. latitude = latitude
-		self.longitude = longitude
 
-		result = self.api_client_auth.getByGeocode(self.latitude, self.longitude)
+		result = self.api_client_auth.getByGeocode(latitude, longitude)
 
 		return result
 
 
 	def locating_res_by_id(self, res_id):
 
-		self.res_id = res_id
 
 		# id > 18387708 
 		# name > kakada ramprasad
 		# "locality_verbose": "Kilpauk, Chennai"
 
-		result = self.api_client_auth.getRestaurantDetails(self.res_id)
+		result = self.api_client_auth.getRestaurantDetails(res_id)
 
 
 		return result
